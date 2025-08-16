@@ -1,0 +1,297 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>大阪亲子游行程</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#E63946',
+                        secondary: '#457B9D',
+                        accent: '#F1FAEE',
+                        dark: '#1D3557',
+                        light: '#A8DADC'
+                    },
+                    fontFamily: {
+                        sans: ['-apple-system', 'BlinkMacSystemFont', 'Helvetica Neue', 'Arial', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .card-hover {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 8px 20px -5px rgba(0,0,0,0.1);
+            }
+            .timeline-dot::before {
+                content: '';
+                position: absolute;
+                left: -11px;
+                top: 15px;
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                background-color: #E63946;
+                border: 3px solid white;
+                box-shadow: 0 0 0 2px rgba(230, 57, 70, 0.2);
+            }
+        }
+    </style>
+</head>
+<body class="bg-accent font-sans text-dark antialiased">
+    <!-- 顶部导航栏 -->
+    <nav class="sticky top-0 z-50 bg-white shadow-sm py-3 px-4 flex justify-between items-center">
+        <div class="flex items-center">
+            <i class="fa fa-calendar-check-o text-primary text-xl mr-2"></i>
+            <span class="font-bold text-dark">大阪亲子游</span>
+        </div>
+        <div class="text-sm text-gray-500">9月行程</div>
+    </nav>
+
+    <!-- 头部横幅 -->
+    <header class="relative bg-primary text-white py-14 px-6 overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <i class="fa fa-plane absolute top-10 left-5 text-5xl rotate-12"></i>
+            <i class="fa fa-ship absolute bottom-8 right-5 text-5xl -rotate-12"></i>
+            <i class="fa fa-tree absolute top-1/3 right-1/4 text-4xl"></i>
+            <i class="fa fa-cutlery absolute bottom-1/4 left-1/3 text-4xl"></i>
+        </div>
+        <div class="relative z-10 max-w-3xl mx-auto text-center">
+            <h1 class="text-[clamp(1.6rem,8vw,2.5rem)] font-bold mb-3 text-shadow">大阪亲子游行程</h1>
+            <p class="text-[clamp(0.9rem,3vw,1.1rem)] opacity-90">一家三口的日本欢乐之旅</p>
+            <div class="mt-5 inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm">
+                <i class="fa fa-child mr-2"></i>带5岁宝宝的轻松行程
+            </div>
+        </div>
+    </header>
+
+    <!-- 总费用概览 -->
+    <div class="bg-white shadow-md mx-4 my-5 rounded-xl p-4">
+        <h2 class="text-base font-bold text-secondary mb-3 flex items-center">
+            <i class="fa fa-yen mr-2"></i>费用概览
+        </h2>
+        <div class="grid grid-cols-2 gap-2 text-sm">
+            <div class="flex items-center p-2 rounded bg-gray-50">
+                <i class="fa fa-plane text-primary w-5"></i>
+                <span class="ml-2">机票：2996元</span>
+            </div>
+            <div class="flex items-center p-2 rounded bg-gray-50">
+                <i class="fa fa-hotel text-primary w-5"></i>
+                <span class="ml-2">白滨万豪：644元</span>
+            </div>
+            <div class="flex items-center p-2 rounded bg-gray-50">
+                <i class="fa fa-hotel text-primary w-5"></i>
+                <span class="ml-2">大阪酒店：3670元</span>
+            </div>
+            <div class="flex items-center p-2 rounded bg-gray-50">
+                <i class="fa fa-hotel text-primary w-5"></i>
+                <span class="ml-2">姬路酒店：559元</span>
+            </div>
+            <div class="flex items-center p-2 rounded bg-gray-50">
+                <i class="fa fa-film text-primary w-5"></i>
+                <span class="ml-2">环球影城：1255元</span>
+            </div>
+            <div class="flex items-center p-2 rounded bg-gray-50">
+                <i class="fa fa-plus-circle text-primary w-5"></i>
+                <span class="ml-2">其他：温泉、餐饮等</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 行程主体 -->
+    <main class="max-w-4xl mx-auto px-4 pb-16">
+        <!-- 9月10日 -->
+        <div class="mb-6">
+            <div class="bg-secondary text-white px-4 py-3 rounded-t-xl flex justify-between items-center">
+                <h2 class="text-lg font-bold">9月10日 <span class="text-xs font-normal opacity-80">抵达日</span></h2>
+                <span class="bg-white/20 px-3 py-1 rounded-full text-xs">白滨</span>
+            </div>
+            <div class="bg-white shadow-md rounded-b-xl overflow-hidden card-hover">
+                <div class="p-4 border-b border-gray-100 relative pl-10 timeline-dot">
+                    <h3 class="font-bold text-dark text-base">上午</h3>
+                    <p class="text-gray-600 mt-1 text-sm">11点抵达关西T2，乘坐JR线前往白滨（约2小时），入住万豪酒店，稍作休整</p>
+                </div>
+                <div class="p-4 border-b border-gray-100 relative pl-10 timeline-dot">
+                    <h3 class="font-bold text-dark text-base">下午</h3>
+                    <p class="text-gray-600 mt-1 text-sm">前往白良滨沙滩玩耍，让孩子接触海滨风光，傍晚可在酒店附近散步</p>
+                </div>
+                <div class="p-4 relative pl-10 timeline-dot">
+                    <h3 class="font-bold text-dark text-base">晚上</h3>
+                    <p class="text-gray-600 mt-1 text-sm">体验白滨温泉（部分温泉有儿童友好区域），缓解旅途疲劳</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 9月11日 -->
+        <div class="mb-6">
+            <div class="bg-secondary text-white px-4 py-3 rounded-t-xl flex justify-between items-center">
+                <h2 class="text-lg font-bold">9月11日</h2>
+                <span class="bg-white/20 px-3 py-1 rounded-full text-xs">白滨 → 大阪</span>
+            </div>
+            <div class="bg-white shadow-md rounded-b-xl overflow-hidden card-hover">
+                <div class="p-4 border-b border-gray-100 relative pl-10 timeline-dot">
+                    <h3 class="font-bold text-dark text-base">上午</h3>
+                    <p class="text-gray-600 mt-1 text-sm">前往ToreTore海鲜市场，观看12点的金枪鱼解体秀，品尝新鲜海鲜</p>
+                </div>
+                <div class="p-4 border-b border-gray-100 relative pl-10 timeline-dot">
+                    <h3 class="font-bold text-dark text-base">下午</h3>
+                    <p class="text-gray-600 mt-1 text-sm">继续在海边游玩，或参观南方熊楠纪念馆（互动性强，适合孩子）</p>
+                </div>
+                <div class="p-4 relative pl-10 timeline-dot">
+                    <h3 class="font-bold text-dark text-base">傍晚</h3>
+                    <p class="text-gray-600 mt-1 text-sm">乘坐南海电铁返回大阪，入住谷町君酒店，晚上可逛难波附近超市</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 9月12日 -->
+        <div class="mb-6">
+            <div class="bg-secondary text-white px-4 py-3 rounded-t-xl flex justify-between items-center">
+                <h2 class="text-lg font-bold">9月12日</h2>
+                <span class="bg-white/20 px-3 py-1 rounded-full text-xs">环球影城</span>
+            </div>
+            <div class="bg-white shadow-md rounded-b-xl overflow-hidden card-hover">
+                <div class="p-4 relative pl-10 timeline-dot">
+                    <h3 class="font-bold text-dark text-base">全天</h3>
+                    <p class="text-gray-600 mt-1 text-sm">游玩环球影城（1255元），重点打卡儿童友好项目：</p>
+                    <ul class="ml-3 mt-2 text-gray-600 text-sm list-disc">
+                        <li>小黄人乐园（迷你过山车、4D影院）</li>
+                        <li>芝麻街欢乐世界（适合低龄儿童的小火车）</li>
+                        <li>哈利波特园区（傍晚可看城堡灯光秀）</li>
+                    </ul>
+                    <p class="text-gray-600 mt-2 text-sm">晚上：返回难波酒店休息，可顺路买大阪烧当夜宵</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 9月13日 -->
+        <div class="mb-6">
+            <div class="bg-secondary text-white px-4 py-3 rounded-t-xl flex justify-between items-center">
+                <h2 class="text-lg font-bold">9月13日</h2>
+                <span class="bg-white/20 px-3 py-1 rounded-full text-xs">大阪城 → 海游馆</span>
+            </div>
+            <div class="bg-white shadow-md rounded-b-xl overflow-hidden card-hover">
+                <div class="p-4 border-b border-gray-100 relative pl-10 timeline-dot">
+                    <h3 class="font-bold text-dark text-base">上午</h3>
+                    <p class="text-gray-600 mt-1 text-sm">游览大阪城公园：</p>
+                    <ul class="ml-3 mt-1 text-gray-600 text-sm list-disc">
+                        <li>漫步公园草坪，喂鸽子、看大阪城外观</li>
+                        <li>若孩子体力好，可登大阪城天守阁</li>
+                        <li>公园内有儿童游乐设施，可自由活动</li>
+                    </ul>
+                </div>
+                <div class="p-4 border-b border-gray-100 relative pl-10 timeline-dot">
+                    <h3 class="font-bold text-dark text-base">中午</h3>
+                    <p class="text-gray-600 mt-1 text-sm">在大阪城公园附近用餐（有亲子套餐，如披萨、意面）</p>
+                </div>
+                <div class="p-4 border-b border-gray-100 relative pl-10 timeline-dot">
+                    <h3 class="font-bold text-dark text-base">下午</h3>
+                    <p class="text-gray-600 mt-1 text-sm">前往大阪海游馆，看巨型鲸鲨、企鹅，触摸池让孩子近距离接触海洋生物</p>
+                </div>
+                <div class="p-4 relative pl-10 timeline-dot">
+                    <h3 class="font-bold text-dark text-base">晚上</h3>
+                    <p class="text-gray-600 mt-1 text-sm">选项1：旁边的乐高探索中心（拼搭体验、迷你乐园）<br>
+                    选项2：乘坐天保山大摩天轮，俯瞰大阪港风光<br>
+                    逛道顿堀，尝章鱼烧、鲷鱼烧等小吃</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 9月14日 -->
+        <div class="mb-6">
+            <div class="bg-secondary text-white px-4 py-3 rounded-t-xl flex justify-between items-center">
+                <h2 class="text-lg font-bold">9月14日</h2>
+                <span class="bg-white/20 px-3 py-1 rounded-full text-xs">姬路城 → 花火大会</span>
+            </div>
+            <div class="bg-white shadow-md rounded-b-xl overflow-hidden card-hover">
+                <div class="p-4 border-b border-gray-100 relative pl-10 timeline-dot">
+                    <h3 class="font-bold text-dark text-base">上午</h3>
+                    <p class="text-gray-600 mt-1 text-sm">从大阪乘坐JR神户线前往姬路（约1小时），游览姬路城：<br>
+                    走亲子路线，登天守阁看铠甲模型，在好古园喂鲤鱼、逛日式庭院</p>
+                </div>
+                <div class="p-4 border-b border-gray-100 relative pl-10 timeline-dot">
+                    <h3 class="font-bold text-dark text-base">中午</h3>
+                    <p class="text-gray-600 mt-1 text-sm">在姬路城下町商店街吃午餐，推荐姬路拉面或釜饭（选儿童套餐）</p>
+                </div>
+                <div class="p-4 border-b border-gray-100 relative pl-10 timeline-dot">
+                    <h3 class="font-bold text-dark text-base">下午</h3>
+                    <p class="text-gray-600 mt-1 text-sm">可逛姬路市立博物馆（互动工艺体验），或在车站附近商场休息</p>
+                </div>
+                <div class="p-4 relative pl-10 timeline-dot">
+                    <h3 class="font-bold text-dark text-base">傍晚</h3>
+                    <p class="text-gray-600 mt-1 text-sm">18:40-19:40观看姬路港祭海上花火大会，结束后入住姬路Richmond酒店（559元）</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 9月15日 -->
+        <div class="mb-6">
+            <div class="bg-secondary text-white px-4 py-3 rounded-t-xl flex justify-between items-center">
+                <h2 class="text-lg font-bold">9月15日</h2>
+                <span class="bg-white/20 px-3 py-1 rounded-full text-xs">有马温泉</span>
+            </div>
+            <div class="bg-white shadow-md rounded-b-xl overflow-hidden card-hover">
+                <div class="p-4 border-b border-gray-100 relative pl-10 timeline-dot">
+                    <h3 class="font-bold text-dark text-base">上午</h3>
+                    <p class="text-gray-600 mt-1 text-sm">从姬路市前往有马温泉（乘直达巴士约65分钟，700日元），寄存行李后逛温泉街：<br>
+                    体验金汤/银汤公共浴场（儿童需家长陪同），买温泉馒头当零食</p>
+                </div>
+                <div class="p-4 border-b border-gray-100 relative pl-10 timeline-dot">
+                    <h3 class="font-bold text-dark text-base">中午</h3>
+                    <p class="text-gray-600 mt-1 text-sm">在温泉街吃午餐，推荐有马釜饭或但马牛小份套餐（适合孩子）</p>
+                </div>
+                <div class="p-4 border-b border-gray-100 relative pl-10 timeline-dot">
+                    <h3 class="font-bold text-dark text-base">下午</h3>
+                    <p class="text-gray-600 mt-1 text-sm">办理入住后，带小朋友泡旅馆的家庭私汤（提前预约），体验和服试穿或简单手工活动</p>
+                </div>
+                <div class="p-4 relative pl-10 timeline-dot">
+                    <h3 class="font-bold text-dark text-base">晚上</h3>
+                    <p class="text-gray-600 mt-1 text-sm">乘缆车到山顶俯瞰温泉乡夜景，享用旅馆怀石料理晚餐（提前沟通儿童简化餐），饭后在温泉街散步</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 9月16日 -->
+        <div class="mb-6">
+            <div class="bg-secondary text-white px-4 py-3 rounded-t-xl flex justify-between items-center">
+                <h2 class="text-lg font-bold">9月16日</h2>
+                <span class="bg-white/20 px-3 py-1 rounded-full text-xs">返程日</span>
+            </div>
+            <div class="bg-white shadow-md rounded-b-xl overflow-hidden card-hover">
+                <div class="p-4 border-b border-gray-100 relative pl-10 timeline-dot">
+                    <h3 class="font-bold text-dark text-base">上午</h3>
+                    <p class="text-gray-600 mt-1 text-sm">泡早汤，吃日式早餐（米饭、烤鱼、小菜），10点前退房</p>
+                </div>
+                <div class="p-4 border-b border-gray-100 relative pl-10 timeline-dot">
+                    <h3 class="font-bold text-dark text-base">中午</h3>
+                    <p class="text-gray-600 mt-1 text-sm">从有马温泉返回大阪（约1小时），可顺路逛大阪站附近商场买伴手礼</p>
+                </div>
+                <div class="p-4 relative pl-10 timeline-dot">
+                    <h3 class="font-bold text-dark text-base">下午</h3>
+                    <p class="text-gray-600 mt-1 text-sm">从大阪出发返回上海，结束行程</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 底部提示 -->
+    <footer class="bg-dark text-white py-5 px-6 text-center text-sm">
+        <p class="mb-2">祝旅途愉快！带娃出行建议准备儿童推车和常用药品</p>
+        <p>行程可根据天气和孩子状态灵活调整</p>
+    </footer>
+</body>
+</html>
